@@ -1651,7 +1651,7 @@ function Hero() {
     className: _HeroModule.hero
   }, (0, _preact.h)("section", {
     className: [_HeroModule.section, _HeroModule.background].join(' ')
-  }, (0, _preact.h)("h1", null, "Build Secure Apps"), (0, _preact.h)("p", null, "Security and compliance have made data a liability."), (0, _preact.h)("p", null, "Secure sensitive data before uploading to the cloud.")), (0, _preact.h)("section", {
+  }, (0, _preact.h)("h1", null, "Build Secure Apps"), (0, _preact.h)("p", null, "Security and compliance have made storing your customers' data a liability."), (0, _preact.h)("p", null, "Secure sensitive customer data before uploading to the cloud.")), (0, _preact.h)("section", {
     className: _HeroModule.section
   }, (0, _preact.h)("div", null, (0, _preact.h)("pre", null, (0, _preact.h)("code", {
     className: "language-javascript"
@@ -1710,14 +1710,14 @@ function Home() {
     name: "why"
   }), (0, _preact.h)("div", {
     style: {
-      padding: '32px 16px',
-      background: '#efefef'
+      padding: 16,
+      border: '2px solid #ddd'
     }
-  }, (0, _preact.h)("h1", null, "Why Hashcache?"), (0, _preact.h)("p", null, "You want to develop and deliver an amazing product."), (0, _preact.h)("p", null, "You don't want to worry about security, privacy or compliance."), (0, _preact.h)("p", null, "Hashcache will:"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Reduce risk of data breach"), (0, _preact.h)("li", null, "Reduce compliance burden"), (0, _preact.h)("li", null, "Eliminate security, development and legal costs")))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Problem"), (0, _preact.h)("p", null, "Vendors who store sensitive customer data have a security and compliance burden."), (0, _preact.h)("p", null, "Customers have ", (0, _preact.h)("em", null, "zero"), " control over how their data is secured."), (0, _preact.h)("p", null, "Successful breaches extract ", (0, _preact.h)("em", null, "all"), " data.")), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Solution"), (0, _preact.h)("p", null, "Customers secure their data before uploading to the vendor.")), (0, _preact.h)("section", {
+  }, (0, _preact.h)("h1", null, "Why Hashcache?"), (0, _preact.h)("p", null, "You like designing, developing and delivering amazing products."), (0, _preact.h)("p", null, "You ", (0, _preact.h)("em", null, "don't"), " like worrying about security, privacy or compliance."), (0, _preact.h)("p", null, "Hashcache will:"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Reduce risk of data breach"), (0, _preact.h)("li", null, "Reduce compliance burden"), (0, _preact.h)("li", null, "Eliminate security, development and legal costs")))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Problem"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "You store customer data in the cloud so it can be accessed from any device"), (0, _preact.h)("li", null, "Customers are increasingly concerned about their data"), (0, _preact.h)("li", null, "Successful breaches can encrypt or extract ", (0, _preact.h)("em", null, "all"), " data"))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Solution"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Customers secure sensitive data before uploading to the cloud"), (0, _preact.h)("li", null, "A breach of your database does not reveal any sensitive customer data"), (0, _preact.h)("li", null, "You reduce the amount of data you need to secure and make compliant"))), (0, _preact.h)("section", {
     className: _HomeModule.singleCenter
   }, (0, _preact.h)("a", {
     name: "how"
-  }), (0, _preact.h)("h1", null, "How it Works"), (0, _preact.h)("img", {
+  }), (0, _preact.h)("h1", null, "How it Works"), (0, _preact.h)("p", null, "Alice (A) and Bob (B) want to use your messaging feature to discuss some confidential business."), (0, _preact.h)("img", {
     src: _how.default,
     alt: "how it works"
   })), (0, _preact.h)("section", {
@@ -1740,10 +1740,10 @@ function Home() {
     className: "fas fa-notes-medical fa-4x"
   }))), (0, _preact.h)("section", {
     className: _HomeModule.singleCenter
-  }, (0, _preact.h)("h1", null, "Example: Spreadsheets"), (0, _preact.h)("ol", null, (0, _preact.h)("li", null, "The customer wants sensitive data kept secure and private."), (0, _preact.h)("li", null, "You want app usage metrics, e.g. # of sheets, AB test results, ...")), (0, _preact.h)("img", {
+  }, (0, _preact.h)("h1", null, "Example: Spreadsheets"), (0, _preact.h)("ol", null, (0, _preact.h)("li", null, "Customers want their sensitive data kept secure and private"), (0, _preact.h)("li", null, "You want app usage metrics such as: files created, daily active, AB feature tests, ...")), (0, _preact.h)("img", {
     src: _apps.default,
     alt: "applications"
-  }), (0, _preact.h)("p", null, (0, _preact.h)("strong", null, "Solution")), (0, _preact.h)("p", null, "Use Hashcache to secure ", (0, _preact.h)("em", null, "only"), " the cells of spreadsheets, ", (0, _preact.h)("em", null, "not"), " rows, columns or filenames."), (0, _preact.h)("p", null, "The customer takes control of their sensitive data and you retain quality app usage metrics. With ", (0, _preact.h)("em", null, "less"), " sensitive data stored in your database, you can save on security and compliance costs."), (0, _preact.h)("p", null, "A win win for customers and vendors.")), (0, _preact.h)("section", null, (0, _preact.h)("a", {
+  }), (0, _preact.h)("p", null, (0, _preact.h)("strong", null, "Solution")), (0, _preact.h)("p", null, "Use Hashcache to secure ", (0, _preact.h)("em", null, "only"), " the cells of spreadsheets containing sensitive raw data before uploading to the cloud."), (0, _preact.h)("p", null, "Your app can still leverage metadata such as: rows, columns and filenames to provide analytics and support."), (0, _preact.h)("p", null, (0, _preact.h)("strong", null, "Key Points")), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "The customer is now in control of securing their sensitive data"), (0, _preact.h)("li", null, "You retain quality app usage metrics and Analytics"), (0, _preact.h)("li", null, "With ", (0, _preact.h)("em", null, "less"), " sensitive data stored in your database, you can save on security and compliance costs")), (0, _preact.h)("p", null, (0, _preact.h)("strong", null, "A win win for you and your customers"))), (0, _preact.h)("section", null, (0, _preact.h)("a", {
     name: "about"
   }), (0, _preact.h)("h1", null, "About"), (0, _preact.h)("p", null, "Hashcache is developed in Vancouver, B.C. by ", (0, _preact.h)("a", {
     href: "https://twitter.com/mattdlockyer"
@@ -1892,7 +1892,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39341" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41643" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
