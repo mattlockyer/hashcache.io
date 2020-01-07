@@ -1536,16 +1536,28 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+var scrollTo = function scrollTo(where) {
+  return function (e) {
+    e.preventDefault();
+    document.querySelector("[name=\"".concat(where, "\"]")).scrollIntoView();
+  };
+};
+
 var links = [(0, _preact.h)("a", {
-  href: "#why"
+  href: "# ",
+  onClick: scrollTo('why')
 }, "Why"), (0, _preact.h)("a", {
-  href: "#how"
+  href: "# ",
+  onClick: scrollTo('how')
 }, "How"), (0, _preact.h)("a", {
-  href: "#apps"
+  href: "# ",
+  onClick: scrollTo('apps')
 }, "Apps"), (0, _preact.h)("a", {
-  href: "#about"
+  href: "# ",
+  onClick: scrollTo('about')
 }, "About"), (0, _preact.h)("a", {
-  href: "#contact"
+  href: "# ",
+  onClick: scrollTo('contact')
 }, "Contact")];
 
 function Header() {
@@ -1646,16 +1658,18 @@ var _preact = require("preact");
 
 var _HeroModule = require("./Hero.module.scss");
 
+var code = "const data = { msg: \"hello world!\" }\nconst tags = [\"example\", \"message\"]\n// share with users \"Alice\" and \"Bob\"\nconst accounts = [\"Alice\", \"Bob\"]\nawait hashcache.store({ data, tags, accounts })\n...\nconst results = await hashcache.getData(tags)\nconsole.log(results[0].data)\n// { msg: \"hello world!\" }\n";
+
 function Hero() {
   return (0, _preact.h)("div", {
     className: _HeroModule.hero
   }, (0, _preact.h)("section", {
     className: [_HeroModule.section, _HeroModule.background].join(' ')
-  }, (0, _preact.h)("h1", null, "Build Secure Apps"), (0, _preact.h)("p", null, "Security and compliance have made storing your customers' data a liability."), (0, _preact.h)("p", null, "Secure sensitive customer data before uploading to the cloud.")), (0, _preact.h)("section", {
+  }, (0, _preact.h)("h1", null, "Build Secure Apps"), (0, _preact.h)("p", null, "Security and compliance have made storing your customers data a liability."), (0, _preact.h)("p", null, "Let users secure their own sensistive data before it touches the cloud."), (0, _preact.h)("p", null, "Integrate seamlessly into your app with a few lines of code.")), (0, _preact.h)("section", {
     className: _HeroModule.section
   }, (0, _preact.h)("div", null, (0, _preact.h)("pre", null, (0, _preact.h)("code", {
     className: "language-javascript"
-  }, "const data = { msg: \"hello world!\" }\nconst tags = [\"example\", \"message\"]\n// share with users \"Alice\" and \"Bob\"\nconst accounts = [\"Alice\", \"Bob\"]\nawait hashcache.store({ data, tags, accounts })\n...\nconst results = await hashcache.getData(tags)\nconsole.log(results[0].data)\n// { msg: \"hello world!\" }\n")))));
+  }, code)))));
 }
 },{"preact":"../node_modules/preact/dist/preact.module.js","./Hero.module.scss":"components/Hero/Hero.module.scss"}],"img/how.png":[function(require,module,exports) {
 module.exports = "/how.8a8be218.png";
@@ -1713,7 +1727,7 @@ function Home() {
       padding: 16,
       border: '2px solid #ddd'
     }
-  }, (0, _preact.h)("h1", null, "Why Hashcache?"), (0, _preact.h)("p", null, "You like designing, developing and delivering amazing products."), (0, _preact.h)("p", null, "You ", (0, _preact.h)("em", null, "don't"), " like worrying about security, privacy or compliance."), (0, _preact.h)("p", null, "Hashcache will:"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Reduce risk of data breach"), (0, _preact.h)("li", null, "Reduce compliance burden"), (0, _preact.h)("li", null, "Eliminate security, development and legal costs")))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Problem"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "You store customer data in the cloud so it can be accessed from any device"), (0, _preact.h)("li", null, "Customers are increasingly concerned about their data"), (0, _preact.h)("li", null, "Successful breaches can encrypt or extract ", (0, _preact.h)("em", null, "all"), " data"))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Solution"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Customers secure sensitive data before uploading to the cloud"), (0, _preact.h)("li", null, "A breach of your database does not reveal any sensitive customer data"), (0, _preact.h)("li", null, "You reduce the amount of data you need to secure and make compliant"))), (0, _preact.h)("section", {
+  }, (0, _preact.h)("h1", null, "Why Hashcache?"), (0, _preact.h)("p", null, "You like designing, developing and delivering amazing products."), (0, _preact.h)("p", null, "You ", (0, _preact.h)("em", null, "don't"), " like worrying about security, privacy or compliance."), (0, _preact.h)("p", null, "Hashcache will reduce:"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Costs of development and security"), (0, _preact.h)("li", null, "Threat of data breach"), (0, _preact.h)("li", null, "Burden and legal cost of compliance")), (0, _preact.h)("p", null, "Spend more resources making your amazing product."))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Problem"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Customers are increasingly skeptical about the handling of their data"), (0, _preact.h)("li", null, "Data hacks, disgruntled employees and unauthorized selling of data are growing concerns"), (0, _preact.h)("li", null, "A breach can encrypt or extract ", (0, _preact.h)("em", null, "all"), " data"))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Solution"), (0, _preact.h)("ul", null, (0, _preact.h)("li", null, "Customers secure their sensitive data individually and on their own devices before uploading to the cloud"), (0, _preact.h)("li", null, "You reduce sensitive data liabilities, security costs and compliance burdens"), (0, _preact.h)("li", null, "A breach does ", (0, _preact.h)("em", null, "not"), " reveal any sensitive customer data"))), (0, _preact.h)("section", {
     className: _HomeModule.singleCenter
   }, (0, _preact.h)("a", {
     name: "how"
@@ -1750,75 +1764,10 @@ function Home() {
   }, "Matt Lockyer"), ".")), (0, _preact.h)("section", null, (0, _preact.h)("a", {
     name: "contact"
   }), (0, _preact.h)("h1", null, "Contact"), (0, _preact.h)("p", null, (0, _preact.h)("a", {
-    href: "mailto:hashcacheio@gmail.com"
-  }, "hashcacheio@gmail.com"))));
+    href: "mailto:hashcache@protonmail.com"
+  }, "hashcache@protonmail.com"))));
 }
-},{"preact":"../node_modules/preact/dist/preact.module.js","preact/hooks":"../node_modules/preact/hooks/dist/hooks.module.js","./../../components/Hero/Hero":"components/Hero/Hero.js","./../../img/how.png":"img/how.png","./../../img/apps.png":"img/apps.png","./Home.module.scss":"routes/Home/Home.module.scss"}],"routes/How/encrypt.svg":[function(require,module,exports) {
-module.exports = "/encrypt.2a567e1c.svg";
-},{}],"routes/How/decrypt.svg":[function(require,module,exports) {
-module.exports = "/decrypt.da41db9f.svg";
-},{}],"routes/How/How.module.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-module.exports = {
-  "center": "How-module_center_2nkCR",
-  "route": "How-module_route_2VHuP",
-  "code": "How-module_code_2LpKB",
-  "displayNone": "How-module_displayNone_pKrsG",
-  "section": "How-module_section_36-Qx",
-  "root": "How-module_root_2YhnH",
-  "col2": "How-module_col2_34Kb2",
-  "text": "How-module_text_2Tbor"
-};
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"routes/How/How.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = How;
-
-var _preact = require("preact");
-
-var _hooks = require("preact/hooks");
-
-var _encrypt = _interopRequireDefault(require("./encrypt.svg"));
-
-var _decrypt = _interopRequireDefault(require("./decrypt.svg"));
-
-var _HowModule = require("./How.module.scss");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var rc = function rc(a) {
-  return (0, _preact.h)("span", {
-    className: _HowModule.code
-  }, a);
-};
-
-function How() {
-  (0, _hooks.useEffect)(function () {
-    window.scrollTo(0, 0);
-  }, []);
-  return (0, _preact.h)("div", {
-    className: [_HowModule.route, _HowModule.root].join(' ')
-  }, (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Why Hashcache?"), (0, _preact.h)("p", null, "Our mission is making encrytion simple and easy for any developer. We believe the first step to privacy preserving applications puts the user in control of their data.")), (0, _preact.h)("section", null, (0, _preact.h)("h3", null, "How it Works - Encryption"), (0, _preact.h)("div", {
-    className: _HowModule.col2
-  }, (0, _preact.h)("div", null, (0, _preact.h)("img", {
-    src: _encrypt.default
-  })), (0, _preact.h)("div", {
-    className: _HowModule.text
-  }, (0, _preact.h)("ol", null, (0, _preact.h)("li", null, "Alice is using MyApp"), (0, _preact.h)("li", null, "Alice opens/resumes ", rc('hc.session')), (0, _preact.h)("li", null, "Alice creates ", rc('data'), " and an ", rc('hc.key'), " "), (0, _preact.h)("li", null, "MyApp calls ", rc('hc.encrypt')), (0, _preact.h)("li", null, rc('data'), " is now ", rc('encrypted'))), (0, _preact.h)("p", null, "An ", rc('hc.session'), " is created when a unique user of MyApp provides a password. We call this  ", (0, _preact.h)("b", null, "\"Data 2 Factor Authentication\" (D2FA)"), "."), (0, _preact.h)("p", null, "The ", rc('hc.session'), " has a unique ", rc('session key'), " used to encrypt all key material."), (0, _preact.h)("p", null, "Each piece of data is encrypted with a unique one time use \"data key\".")))), (0, _preact.h)("section", null, (0, _preact.h)("h3", null, "How it Works - Decryption"), (0, _preact.h)("div", {
-    className: _HowModule.col2
-  }, (0, _preact.h)("div", null, (0, _preact.h)("img", {
-    src: _decrypt.default
-  })), (0, _preact.h)("div", {
-    className: _HowModule.text
-  }, (0, _preact.h)("p", null, "MyApp has fetched Alice's encrypted data and the Hashcache session will provide a corresponding data key."), (0, _preact.h)("ol", null, (0, _preact.h)("li", null, "MyApp provides ", rc('encrypted'), " data"), (0, _preact.h)("li", null, "Alice provides the ", rc('hc.key')), (0, _preact.h)("li", null, "MyApp calls ", rc('hc.decrypt')), (0, _preact.h)("li", null, rc('encrypted'), " is now decrypted ", rc('data'))), (0, _preact.h)("p", null, "The ", rc('hc.session'), " has a unique ", rc('session key'), " used to encrypt and decrypt all subsequent keys and data.")))), (0, _preact.h)("section", null, (0, _preact.h)("h1", null, "Build Apps Differently"), (0, _preact.h)("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")));
-}
-},{"preact":"../node_modules/preact/dist/preact.module.js","preact/hooks":"../node_modules/preact/hooks/dist/hooks.module.js","./encrypt.svg":"routes/How/encrypt.svg","./decrypt.svg":"routes/How/decrypt.svg","./How.module.scss":"routes/How/How.module.scss"}],"App.js":[function(require,module,exports) {
+},{"preact":"../node_modules/preact/dist/preact.module.js","preact/hooks":"../node_modules/preact/hooks/dist/hooks.module.js","./../../components/Hero/Hero":"components/Hero/Hero.js","./../../img/how.png":"img/how.png","./../../img/apps.png":"img/apps.png","./Home.module.scss":"routes/Home/Home.module.scss"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1836,18 +1785,14 @@ var _Footer = _interopRequireDefault(require("./components/Footer/Footer"));
 
 var _Home = _interopRequireDefault(require("./routes/Home/Home"));
 
-var _How = _interopRequireDefault(require("./routes/How/How"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
   return [(0, _preact.h)(_Header.default, null), (0, _preact.h)(_preactRouter.default, null, (0, _preact.h)(_Home.default, {
     path: "/"
-  }), (0, _preact.h)(_How.default, {
-    path: "/how"
   })), (0, _preact.h)(_Footer.default, null)];
 }
-},{"preact":"../node_modules/preact/dist/preact.module.js","preact-router":"../node_modules/preact-router/dist/preact-router.es.js","./components/Header/Header":"components/Header/Header.js","./components/Footer/Footer":"components/Footer/Footer.js","./routes/Home/Home":"routes/Home/Home.js","./routes/How/How":"routes/How/How.js"}],"index.js":[function(require,module,exports) {
+},{"preact":"../node_modules/preact/dist/preact.module.js","preact-router":"../node_modules/preact-router/dist/preact-router.es.js","./components/Header/Header":"components/Header/Header.js","./components/Footer/Footer":"components/Footer/Footer.js","./routes/Home/Home":"routes/Home/Home.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _preact = require("preact");
@@ -1892,7 +1837,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41643" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33561" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
