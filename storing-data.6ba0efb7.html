@@ -1,0 +1,16 @@
+<h1 id="storing-data">Storing Data</h1><p>You can store data for a single user by simply calling the <code>store</code> function.</p><p>Let&#39;s assume our username is &quot;Alice&quot;.</p><pre><code>const result = await hashcache.store({ data })
+console.log(result)
+// the output of the result is a JSON document
+{
+    owner: &#39;Alice&#39;,
+    tags: [], // tags (see next section)
+    accounts: [], // accounts data is shared with (see next section)
+    hash: &#39;sha256HashOfEncryptedData&#39;,
+    data: Uint8Array(), // the unencrypted data
+    type: // 1: txt, 2: json, 3: image, 4: video
+    created: // timestamp in JS (including milliseconds)
+}</code></pre><p>This will encrypt the data and store that encrypted data, only for the current user, in Hashcache&#39;s cloud.</p><p>In the next section, you&#39;ll see how easy it is to fetch user data.</p><h3 id="tags">Tags</h3><p>As a developer you may want to organize the user&#39;s data into something more structured. This is where tags come in.</p><p>For example setting the priority of todos:</p><pre><code>await hashcache.store({ data, tags: [&#39;todos&#39;, &#39;todos_high&#39;] })</code></pre><blockquote>
+<p>Tags are not filters!</p>
+</blockquote><p>For example, fetching [&#39;todos&#39;, &#39;todos_high&#39;] will result in any data matching &#39;todos&#39;, even if it <em>doesn&#39;t</em> include &#39;todos_high&#39;.</p><p>You can add as many tags as you want to a document. Users can generate their own tags. The only limits on tags are that you can only search for 10 tags total at a time.</p><blockquote>
+<p>Be specific with tags</p>
+</blockquote><h3 id="sharing">Sharing</h3><p>Your users will want to share their data with other users. This creates and stores an encrypted key that can decrypt the same data with other user.</p><p>For example, &quot;Alice&quot; wants to share some data with &quot;Bob&quot;.</p><pre><code>await hashcache.store({ data, accounts: [&#39;Bob&#39;] })</code></pre>

@@ -1,0 +1,28 @@
+<h3 id="app-example-chat">App Example: Chat</h3><p>You want to make an encrypted chat feature in your app. Let&#39;s take a look at a chat between Alice and Bob.</p><p>Alice sends a message like so:</p><pre><code>const msg = {
+    subject: &#39;Hey Bob&#39;,
+    message: &#39;Psst! This is encrypted just for you!&#39;
+} // a json document for a message
+await hashcache.store({
+    data: msg,
+    tags: [&#39;AliceBobChat&#39;], // use a custom tag combining usernames
+    accounts:[&#39;Bob&#39;] // share with username &#39;Bob&#39;
+})</code></pre><p>Bob can receive these messages:</p><pre><code>const messages = [] // start with an empty array of messages
+await hashcache.fetch({ 
+    tags: [&#39;AliceBobChat&#39;], // fetch data matching the tag
+    olderThan: Date.now() // can be used to paginate (default)
+}, (data) =&gt; {
+    data.forEach((d) =&gt; d.sender = d.owner === myUserName) // useful for rendering
+    messages.push(...data) // add all data documents to the array
+    messages.sort((a, b) =&gt; b.created - a.created) // optionally sort messages
+    // ...
+    // update UI with the latest messages
+    // ...
+})</code></pre><p>And send his reply:</p><pre><code>const msg = {
+    subject: &#39;Reply to Alice&#39;,
+    message: &#39;This is pretty cool, and so easy to code!&#39;
+}
+await hashcache.store({
+    data: msg,
+    tags: [&#39;AliceBobChat&#39;],
+    accounts:[&#39;Alice&#39;]
+})</code></pre>

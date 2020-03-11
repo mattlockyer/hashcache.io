@@ -1,0 +1,10 @@
+<h1 id="fetching-data">Fetching Data</h1><p>Once authenticated, you can fetch user data using a few simple arguments.</p><pre><code>const results = await hashcache.fetch({ tags, limit, olderThan, newerThan }, (docs) =&gt; {
+    // ... process decrypted documents ...
+})</code></pre><p>Let&#39;s break this out into a bit more detail and with examples.</p><p>For instance, to find the last 20 items tagged with &quot;notes&quot;, you would do the following.</p><pre><code>hashcache.fetch({
+    tags: [
+        &#39;tag&#39;, // array of strings
+    ],
+    olderThan: Date.now(), // default, data is fetched in desc order of &#39;created&#39; timestamp
+    newerThan: 0, // default
+    limit: 20, // default (max)
+})</code></pre>
